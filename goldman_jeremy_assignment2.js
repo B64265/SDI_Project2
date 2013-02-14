@@ -13,6 +13,7 @@ var lineMax = 5;
 var currentLines = 2;
 var monthsSinceUpgrade = 28;
 var phoneSelection = ["Galaxy S III", "RAZR HD", "iPhone 5", "Droid Incredible LTE"];
+var chooseNumDevices = 2;
 var custCurrentCarrier = "Verizon Wireless";
 var supportedCarriers = ["Verizon Wireless", "Sprint", "AT&T"];
 var custFirstName = "Jenna";
@@ -66,5 +67,23 @@ var goodBye = function(custFirstName, custLastName){
 	return thankCustomer;
 	
 };
+
+//Array Function - return Array
+var completePhoneSelection = function(phoneSelection, chooseNumDevices){
+
+var chosenPhones = [];
+	
+	for(i = 0; i < chooseNumDevices; i++){
+		var currentSelection = phoneSelection[i];
+		chosenPhones.add(currentSelection);
+		console.log("You have just picked the " + currentSelection);
+	}
+	
+	return chosenPhones;
+};
+
+
+
+
 
 
