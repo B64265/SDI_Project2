@@ -1,5 +1,5 @@
 //Jeremy Goldman
-//SDI_Project 2
+//SDI_Project2
 //02/10/13
 //
 //   This is a continuation of the last story about a customer who goes to purchase a mobile phone*
@@ -15,6 +15,8 @@ var monthsSinceUpgrade = 28;
 var phoneSelection = ["Galaxy S III", "RAZR HD", "iPhone 5", "Droid Incredible LTE"];
 var custCurrentCarrier = "Verizon Wireless";
 var supportedCarriers = ["Verizon Wireless", "Sprint", "AT&T"];
+var custFirstName = "Jenna";
+var custLastName = " Mike-Mayer";
 
 //Procedure function - No return value
 var recentlyUpgraded = function(monthsSinceUpgrade){
@@ -28,7 +30,7 @@ var recentlyUpgraded = function(monthsSinceUpgrade){
 	
 };
 
-//BOOL Function
+//BOOL Function - return BOOL
 var hasCustCarrier = function (supportedCarriers, custCurrentCarrier){
 	
 	if(supportedCarriers.indexOf(custCurrentCarrier > -1)){
@@ -43,7 +45,7 @@ var hasCustCarrier = function (supportedCarriers, custCurrentCarrier){
 	
 };
 
-// Number Function
+// Number Function - return number
 var customerLine = function(custInLine){
 	var empToHelp = 2;
 	
@@ -54,6 +56,15 @@ var customerLine = function(custInLine){
 	return custInLine;
 };
 
-
+//String Function - return String
+var goodBye = function(custFirstName, custLastName){
+	
+	var empName = "Jeremy";
+	
+	var thankCustomer = "Thanks for coming in today " + custFirstName + custLastName +"! My name is " + empName +" if you have any questions!";
+	
+	return thankCustomer;
+	
+};
 
 
