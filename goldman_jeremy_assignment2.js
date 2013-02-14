@@ -27,15 +27,14 @@ var recentlyUpgraded = function(monthsSinceUpgrade){
 	}else{
 		
 		console.log("It looks like you recently got this phone, but lets see what we can do!");
-	}
-	
+	}	
 };
 
 //BOOL Function - return BOOL
 var hasCustCarrier = function (supportedCarriers, custCurrentCarrier){
 	
 	if(supportedCarriers.indexOf(custCurrentCarrier > -1)){
-		console.log("Great! It looks like " + custCurrentCarrier + "is one of our supported carriers!");
+		console.log("Great! It looks like " + custCurrentCarrier + " is one of our supported carriers!");
 		return true;
 		
 	}else{
@@ -62,7 +61,7 @@ var goodBye = function(custFirstName, custLastName){
 	
 	var empName = "Jeremy";
 	
-	var thankCustomer = "Thanks for coming in today " + custFirstName + custLastName +"! My name is " + empName +" if you have any questions!";
+	var thankCustomer = "Thanks for coming in today " + custFirstName + custLastName +"! My name is " + empName +" if you have any questions! What can I get for you?";
 	
 	return thankCustomer;
 	
@@ -75,14 +74,22 @@ var chosenPhones = [];
 	
 	for(i = 0; i < chooseNumDevices; i++){
 		var currentSelection = phoneSelection[i];
-		chosenPhones.add(currentSelection);
-		console.log("You have just picked the " + currentSelection);
+		chosenPhones.unshift(currentSelection);
+		console.log("You have picked the " + currentSelection);
 	}
 	
 	return chosenPhones;
 };
 
+recentlyUpgraded(monthsSinceUpgrade);
 
+console.log("It is " + hasCustCarrier(supportedCarriers, custCurrentCarrier) + " that we carry " + custCurrentCarrier);
+
+console.log("There are currently " + customerLine(custInLine) + " people ahead of you in line!");
+
+console.log(goodBye(custFirstName, custLastName));
+
+console.log ("You have picked " + completePhoneSelection(phoneSelection, chooseNumDevices) + " I hope you enjoy those phones!");
 
 
 
