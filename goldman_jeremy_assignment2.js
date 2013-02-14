@@ -8,8 +8,6 @@
 
 //Variables
 var custInLine = 8;
-var empToHelp = 3;
-var waitTime = 20;
 var linesRequested = 3;
 var lineMax = 5;
 var currentLines = 2;
@@ -33,7 +31,7 @@ var recentlyUpgraded = function(monthsSinceUpgrade){
 //BOOL Function
 var hasCustCarrier = function (supportedCarriers, custCurrentCarrier){
 	
-	if(supportedCarriers.indexOf(custCurrentCarrier > -1){
+	if(supportedCarriers.indexOf(custCurrentCarrier > -1)){
 		console.log("Great! It looks like " + custCurrentCarrier + "is one of our supported carriers!");
 		return true;
 		
@@ -44,3 +42,18 @@ var hasCustCarrier = function (supportedCarriers, custCurrentCarrier){
 	}
 	
 };
+
+// Number Function
+var customerLine = function(custInLine){
+	var empToHelp = 2;
+	
+	while(custInLine > 0){
+		console.log("There is " + custInLine +" customer(s) in line ahead of you.  We have "+ empToHelp +" employees to work through the line.");
+		custInLine--;
+	}
+	return custInLine;
+};
+
+
+
+
