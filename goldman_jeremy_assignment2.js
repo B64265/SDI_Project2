@@ -8,9 +8,6 @@
 
 //Variables
 var custInLine = 8;
-var linesRequested = 3;
-var lineMax = 5;
-var currentLines = 2;
 var monthsSinceUpgrade = 28;
 var phoneSelection = ["Galaxy S III", "RAZR HD", "iPhone 5", "Droid Incredible LTE"];
 var chooseNumDevices = 2;
